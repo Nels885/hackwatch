@@ -84,7 +84,7 @@ void app_main(void)
   twatch_pmu_init();
   twatch_screen_init();
   twatch_rtc_init();
-  /*
+  #if 0
   datetime.year = 2021;
   datetime.month=4;
   datetime.day=16;
@@ -92,11 +92,11 @@ void app_main(void)
   datetime.minute=00;
   datetime.second=0;
   twatch_rtc_set_date_time(&datetime);
-  */
+  #endif
 
   /* Initialize WiFi controller. */
   wifi_ctrl_init();
-  wifi_set_mode(WIFI_SCANNER);
+  //wifi_set_mode(WIFI_SCANNER);
 
   xTaskCreate(main_ui, "main_ui", 10000, NULL, 1, NULL);
 }
