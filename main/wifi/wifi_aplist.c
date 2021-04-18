@@ -31,7 +31,7 @@ void wifi_aplist_clean(wifi_aplist_t *p_list)
   wifi_ap_t *p_item;
   wifi_ap_t *p_previous;
   
-  ESP_LOGI(TAG, "Clean list");
+  //ESP_LOGI(TAG, "Clean list");
 
   p_previous = NULL;
   p_item = p_list->p_first;
@@ -70,7 +70,7 @@ void wifi_aplist_clean(wifi_aplist_t *p_list)
     }
     else
     {
-      ESP_LOGI(TAG, "%s is fresh enough", p_item->essid);
+      //ESP_LOGI(TAG, "%s is fresh enough", p_item->essid);
 
       /* Keep previous up-to-date. */
       p_previous = p_item;

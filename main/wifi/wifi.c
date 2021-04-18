@@ -468,7 +468,7 @@ void wifi_scanner_task(void *parameter)
       /* Update APs. */
       for (j=0; j<ap_count; j++)
       {
-        ESP_LOGI(TAG, "Found AP '%s'", ap_info[j].ssid);
+        //ESP_LOGI(TAG, "Found AP '%s'", ap_info[j].ssid);
         wifi_aplist_add(&g_wifi_ctrl.ap_list, &ap_info[j]);
       }
 
